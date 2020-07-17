@@ -27,18 +27,6 @@ def is_url(path):
     return "https" in path
 
 
-"""
-def cached_path(url_or_filename,
-                cache_dir=None,
-                force_download=False,
-                proxies=None,
-                resume_download=False,
-                local_files_only=False):
-
-    if is_url(url_or_filename):
-"""
-
-
 def download_file(url, temp_file):
     response = requests.get(url, stream=True)
     total_length = response.headers["Content-Length"]
